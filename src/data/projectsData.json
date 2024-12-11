@@ -34,7 +34,7 @@
   },
   {
     "id": "3",
-    "title": "Projet 3",
+    "title": "Magasin",
     "description": "Dans ce projet, je développe une page web dynamique pour le site d'une architecte d'intérieur, en utilisant JavaScript pour gérer les événements utilisateurs et manipuler le DOM. Je crée également une page de connexion pour l'administrateur et une modale pour uploader de nouveaux médias. Le projet inclut la communication avec une API.",
     "development": "Le développement a été réalisé avec JavaScript.",
     "chalenges": "Le principal défi de ce projet a été de réaliser la communication avec une API.",
