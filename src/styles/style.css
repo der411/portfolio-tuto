@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "~@fontsource/roboto/index.css"; 
+
+@layer base {
+  /* Réinitialisation globale des marges, paddings et box-sizing */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Styles globaux pour le body */
+  body {
+    margin: 0 auto;
+    max-width: 1440px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    background-color: #FFFFFF; /* Couleur de fond pour le mode clair */
+    color: #080808; /* Couleur de texte pour le mode clair */
+  }
+
+  /* Styles pour le mode sombre */
+  .dark body {
+    background-color: #121212; /* Couleur de fond pour le mode sombre */
+    color: #FFFFFF; /* Couleur de texte pour le mode sombre */
+  }
+
+  /* Styles barre de défilement modale*/
+  div::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px #f8fbff;
+    border-radius: 5px;
+  }
+    
+  div::-webkit-scrollbar-thumb {
+    background-color: #9fa9bd;
+    border-radius: 5px;
+  }
+
+  div::-webkit-scrollbar {
+    width: 0.5em;
+    border-radius: 5px;
+  }
+    
+  /* Animation écriture texte d'accroche */
+  .typewriter-wrapper {
+    display: flex;
+    justify-content: center; /* Centre le texte horizontalement */
+  }
+
+  .typewriter {
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation: typing 3.5s steps(40, end) forwards;
+  }
+
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+
+  @media (max-width: 768px) {
+    .typewriter {
+      animation: none;
+      white-space: normal;
+    }
+  }
+
+  /* Animation pour l'effet de grossissement GitHub */
+  @keyframes github-grow {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+  }
+
+  /* Icone GitHub modal, Classe utilitaire pour appliquer l'animation */
+  .github-grow {
+    animation: github-grow 6s infinite;
+  }
+}
